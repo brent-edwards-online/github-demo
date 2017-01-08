@@ -1,0 +1,12 @@
+<H1>
+  Movies
+</H1>
+
+<div *ngFor="let movie of movies; let i=index">  
+  <h2>{{movie.movieId}} - {{ movie.movieName }} - {{ movie.movieExtension.extensionId }}</h2>
+
+  <h3>Extensions</h3>
+  <div *ngFor="let ext of movie.movieExtensions">  
+    {{ ext.extensionId }} - {{ ext.extensionName }} 
+  </div>
+</div>  
